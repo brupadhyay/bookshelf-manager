@@ -1,0 +1,15 @@
+.bookcard {
+    position: relative;
+}
+
+.bookPhoto {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}   
