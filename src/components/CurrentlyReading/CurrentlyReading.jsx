@@ -10,14 +10,18 @@ const CurrentlyReading = () => {
   );
 
   return (
-    <>
+    <div
+      style={{
+        marginTop: "1.5rem",
+      }}
+    >
       <h1>Currently Reading</h1>
       <div className={styles.bookGrid}>
         {CurrentlyReadingBooks.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -8,14 +8,18 @@ const WantToRead = () => {
   const wantToReadBooks = state.filter(({ wantToRead }) => wantToRead);
 
   return (
-    <>
+    <div
+      style={{
+        marginTop: "1.5rem",
+      }}
+    >
       <h1>Want to Read</h1>
       <div className={styles.bookGrid}>
         {wantToReadBooks.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,17 @@
+.navbar {
+    
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > h1 {
+    cursor: pointer;
+}
+
+.navbar > button {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+}

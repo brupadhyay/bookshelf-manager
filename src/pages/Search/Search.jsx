@@ -27,7 +27,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className={styles.search}>
       <h1>Search Page</h1>
       <button onClick={() => navigate("/")}>
         <BiArrowBack />

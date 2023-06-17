@@ -10,6 +10,8 @@ const BookCard = ({ book }) => {
 
   const optionsToDisplay = options.filter((type) => !book[type]);
 
+  const category = options.find((type) => book[type]);
+
   const dropHandler = (e, bookId) => {
     const value = e.target.value;
     if (value) {
@@ -25,6 +27,7 @@ const BookCard = ({ book }) => {
       <img className={styles.bookPhoto} src={book.bookImage} alt="book-photo" />
       <h2>{book.title}</h2>
       <h3>{book.author}</h3>
+      <p>Current Category is {category}</p>
       <select
         onChange={(e) => dropHandler(e, book.id)}
         className={styles.dropdown}

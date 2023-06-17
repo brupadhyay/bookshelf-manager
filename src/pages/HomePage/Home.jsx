@@ -10,9 +10,7 @@ const Home = () => {
   return (
     <div className={styles.homeLayout}>
       <CurrentlyReading />
-      <hr />
       <WantToRead />
-      <hr />
       <Read />
     </div>
   );
