@@ -8,8 +8,6 @@ const bookreducer = (state, action) => {
       let tempState = state;
       tempState = tempState.filter(({ id }) => id !== action.payload.bookId);
 
-      console.log(action.payload);
-
       return [
         ...tempState,
         {

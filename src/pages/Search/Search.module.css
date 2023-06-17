@@ -1,6 +1,6 @@
 .bookGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     row-gap: 1rem;
     column-gap: 2rem;
     position: relative;
@@ -11,8 +11,9 @@
 }
 
 .search > input {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-left: 1rem;
 }
 
 .search > button {

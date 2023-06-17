@@ -12,19 +12,18 @@ const Search = () => {
 
   const navigate = useNavigate();
 
-  const [booksToShow, setBooksToShow] = useState(state);
-
   const [searchValue, setSearchValue] = useState("");
 
   const searchHandler = (e) => {
     const value = e.target.value;
     setSearchValue(value);
-    setBooksToShow(
-      [...state].filter(({ title }) =>
-        title.toLowerCase().includes(value.toLowerCase())
-      )
-    );
   };
+
+  const searchResults = searchValue.trim()
+    ? [...state].filter(({ title }) =>
+        title.toLowerCase().includes(searchValue.toLowerCase())
+      )
+    : state;
 
   return (
     <div className={styles.search}>
@@ -39,7 +38,7 @@ const Search = () => {
       />
       <div className={styles.bookGrid}>
         {searchValue.trim().length > 0 &&
-          booksToShow.map((book) => <BookCard key={book.id} book={book} />)}
+          searchResults.map((book) => <BookCard key={book.id} book={book} />)}
       </div>
     </div>
   );
