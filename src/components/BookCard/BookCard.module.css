@@ -8,8 +8,13 @@
     object-fit: cover;
 }
 
-.dropdown {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}   
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control > p > span {
+    text-transform: capitalize;
+}

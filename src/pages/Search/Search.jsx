@@ -40,6 +40,7 @@ const Search = () => {
         {searchValue.trim().length > 0 &&
           searchResults.map((book) => <BookCard key={book.id} book={book} />)}
       </div>
+      {!searchResults.length && <h2>no book matches your search input</h2>}
     </div>
   );
 };

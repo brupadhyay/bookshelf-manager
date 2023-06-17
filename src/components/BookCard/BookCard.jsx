@@ -12,7 +12,7 @@ const BookCard = ({ book }) => {
 
   const category = options.find((type) => book[type]);
 
-  const dropHandler = (e, bookId) => {
+  const dropdownHandler = (e, bookId) => {
     const value = e.target.value;
     if (value) {
       dispatch({
@@ -27,20 +27,24 @@ const BookCard = ({ book }) => {
       <img className={styles.bookPhoto} src={book.bookImage} alt="book-photo" />
       <h2>{book.title}</h2>
       <h3>{book.author}</h3>
-      <p>Current Category is {category}</p>
-      <select
-        onChange={(e) => dropHandler(e, book.id)}
-        className={styles.dropdown}
-        name="books"
-        id="movement"
-      >
-        <option value="">--Move to--</option>
-        {optionsToDisplay.map((optionVal) => (
-          <option key={optionVal} value={optionVal}>
-            {optionVal}
-          </option>
-        ))}
-      </select>
+      <div className={styles.control}>
+        <p>
+          Current Category is <span>{category}</span>
+        </p>
+        <select
+          onChange={(e) => dropdownHandler(e, book.id)}
+          className={styles.dropdown}
+          name="books"
+          id="movement"
+        >
+          <option value="">--Move to--</option>
+          {optionsToDisplay.map((optionVal) => (
+            <option key={optionVal} value={optionVal}>
+              {optionVal}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };
